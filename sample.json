@@ -1,0 +1,11 @@
+{
+    "bankCustomers": [
+      {
+        "id": "2",
+        "name": "Francus Suarez",
+        "account_no": "524545624626",
+        "bank_name": "UBS Bank",
+        "account_type": "current"
+      }
+    ]
+  }

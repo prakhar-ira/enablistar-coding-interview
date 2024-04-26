@@ -1,0 +1,25 @@
+{
+  "bankCustomers": [
+    {
+      "id": "2",
+      "name": "Francus Suarez",
+      "account_no": "524545624626",
+      "bank_name": "UBS Bank",
+      "account_type": "Saving Account"
+    },
+    {
+      "id": "68a4955e-ca53-42df-9a71-48b61f08fbf4",
+      "name": "TFrank Williamss",
+      "bank_name": "Canara Bank",
+      "account_no": "5245252524",
+      "account_type": "Saving Account"
+    },
+    {
+      "id": "dccefa00-bf19-46cf-b11a-297ba076380a",
+      "name": "Trans William",
+      "bank_name": "DBS Bank",
+      "account_no": "5245252524",
+      "account_type": "Saving Account"
+    }
+  ]
+}

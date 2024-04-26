@@ -1,0 +1,22 @@
+{
+    "/api/bankCustomers": {
+      "GET": {
+        "action": "db.bankCustomers"
+      },
+      "POST": {
+        "action": "db.bankCustomers.push(req.body)",
+        "path": "/api/bankCustomers"
+      }
+    },
+    "/api/bankCustomers/:id": {
+      "GET": {
+        "action": "db.bankCustomers.find(data => data.id == :id)"
+      },
+      "PUT": {
+        "action": "db.bankCustomers.find(data => data.id == :id).completed = true"
+      },
+      "DELETE": {
+        "action": "db.bankCustomers = db.articles.filter(data => data.id != :id)"
+      }
+    }
+  }

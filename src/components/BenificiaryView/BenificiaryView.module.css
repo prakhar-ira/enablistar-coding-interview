@@ -1,0 +1,25 @@
+.viewDetailContainer {
+  font-size: 14px;
+}
+
+.viewDetailContainer > div {
+  margin-top: 20px;
+}
+
+.viewDetailContainer > div > span {
+  margin-right: 1.5rem;
+  width: 20%;
+  color: #5d5d5d;
+  display: inline-block;
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.closeButton {
+  font-size: 20px;
+  color: #9e9e9e;
+}

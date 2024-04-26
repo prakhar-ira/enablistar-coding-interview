@@ -1,0 +1,63 @@
+.sidePanelContainer {
+  --sidepanel-top: 0px;
+  --sidepanel-left: 0px;
+  --sidepanel-right: 0px;
+  --sidepanel-bottom: 0px;
+  --sidepanel-width: 560px;
+  --sidepanel-height: calc(100vh - var(--sidepanel-top));
+  --sidepanel-overlay-width: calc(100vw - var(--sidepanel-left));
+  --sidepanel-overlay-height: calc(100vh - var(--sidepanel-top));
+  --sidepanel-overlay-color: rgba(0, 0, 0, 0.75);
+}
+
+.sidePanel {
+  border-left: 1px solid #f9fbfc;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: var(--sidepanel-top);
+  bottom: var(--sidepanel-bottom);
+  right: var(--sidepanel-right);
+  width: var(--sidepanel-width);
+  animation-duration: 0.75s;
+  animation-timing-function: cubic-bezier(0.25, 0.65, 0.55, 1);
+  background: #f9fbfc;
+  z-index: 4;
+}
+
+.show {
+  animation-name: show;
+}
+
+.hide {
+  animation-name: hide !important;
+}
+
+@keyframes show {
+  from {
+    right: -100%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes hide {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100%;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: var(--sidepanel-top);
+  left: var(--sidepanel-left);
+  width: var(--sidepanel-overlay-width);
+  height: var(--sidepanel-overlay-height);
+  background-color: var(--sidepanel-overlay-color);
+  z-index: 3;
+}

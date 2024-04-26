@@ -1,0 +1,47 @@
+input.input:-webkit-autofill,
+input.input:-webkit-autofill:hover,
+input.input:-webkit-autofill:focus,
+input.input:-webkit-autofill:active {
+  transition: background-color 600000s ease-in-out 0s, color 600000s 0s;
+}
+
+.inputContainer {
+  font-size: 1rem;
+}
+
+.inputLabel {
+  font-size: 1.1rem;
+}
+
+.required:after {
+  content: " *";
+  color: #db1800;
+}
+
+.input {
+  border: #e7e7e7;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 4px 0;
+  color: #0d0d0d;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px 10px;
+  resize: none;
+  background-color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+.input.error {
+  border: 1px solid #db1800;
+}
+
+.errorText {
+  color: #db1800;
+  width: 377px;
+}
+
+.inputHeight {
+  height: 3rem;
+}
