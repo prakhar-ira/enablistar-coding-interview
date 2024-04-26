@@ -1,18 +1,84 @@
-# Getting Started with Create React App
+# Coding Interview Assesment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is created using React, React-Redux, React-Router-DOM, React-Hook-Forms and CSS.
 
-## Available Scripts
+To start web app, RUN `npm install`. After installing, open two terminals:
 
-In the project directory, you can run:
+1. In one terminal RUN `npm start`
+2. In other terminal RUN `json-server --watch db.json --port 3001`
 
-### `npm start`
+#### Key Points:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. The React app will run on `PORT 3000` and mock server i.e json-server will run on `PORT 3001`.
+2. There are total 4 routes in the applications `/`, `/manage-benificiaries`, `/manage-benificiaries/add` and `/manage-benificiaries/edit/:id`.
+3. When you open the app you will see home page with manage benificiary button which will take you to listing page where you can do all action items.
+4. All the flow is according to the doc including error validations and showing on error messages. 
+5. For account number: required field as well as input type number validations are added.
+6. No other framework or third part UI library is being used like MUI/Material etc. All components are created from scratch. 
+7. You can sort by name in the list in ASC or DESC.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Doubts/Confusions:
+
+1. In the initial part of document, one line is added `Fields: FullName, Address, Country (Dropdown any 5 country name), pincode.` that I had confusion where to use those fields. I have ignored that part and focused on the goal and basic flow given in the section next to it.
+
+
+#### Enhancements/Thoughts:
+
+Following are the enhancements that could be made but was not able to implement due to time bound:
+
+1. Scss can be used to implement more powerful functionalities but I have stick to css as mentioned in the assesment doc.
+2. A library called Easy-Peasy which is sugar coated layer of redux, can be used. It's easy to use and handy as compared to redux.
+3. Client side searching and pagination could be implemented but not recommended since both these functionalities should be handled on server side.
+
+#### Test Cases
+
+1. Add Beneficiary:
+
+Successful Add:
+
+Test that adding a new beneficiary with valid data succeeds.
+
+Verify that the beneficiary data is saved correctly in the system.
+
+Missing Required Fields:
+
+Test that attempting to add a beneficiary with missing required fields (e.g., name) results in an error message.
+
+Invalid Data:
+
+Test that adding a beneficiary with invalid data (e.g., invalid account number format) results in an error message.
+
+2. Edit Beneficiary:
+
+Successful Edit:
+
+Test that editing an existing beneficiary's details with valid data succeeds.
+
+Verify that the updated beneficiary data is reflected in the system.
+
+Missing Required Fields:
+
+Test that attempting to edit a beneficiary with missing required fields results in an error message.
+
+Invalid Data:
+
+Test that editing a beneficiary with invalid data results in an error message.
+
+3. View Beneficiary:
+
+Successful View:
+
+Test that viewing an existing beneficiary retrieves the correct data.
+
+4. Delete Beneficiary:
+
+Successful Delete:
+
+Test that deleting an existing beneficiary successfully removes it from the system.
+
+Confirmation:
+
+Test that deleting a beneficiary prompts for confirmation before proceeding.
 
 ### `npm test`
 
@@ -27,44 +93,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
